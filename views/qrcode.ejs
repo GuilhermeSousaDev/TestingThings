@@ -1,0 +1,20 @@
+<div>
+    <input type="text" class="inp" placeholder="Valor do qrcode">
+    <button type="text" onclick="generateQrcode()">Gerar Qrcode</button>
+
+    <img 
+        class="img" 
+        src="" alt="">
+</div>
+
+<script>
+    function generateQrcode() {
+        const img = document.querySelector('img');
+
+        const inp = document.querySelector('.inp');
+
+        const BASE_URL = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data';
+        
+        img.src = `${BASE_URL}=${inp.value}`;
+    }
+</script>

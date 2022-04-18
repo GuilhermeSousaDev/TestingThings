@@ -1,0 +1,23 @@
+<div>
+    <textarea name="txt" id="txt" cols="30" rows="10">
+
+    </textarea>
+    <button onclick="back()">Voltar</button>
+</div>
+
+<script>
+    const txt = document.querySelector('#txt');
+    let arr = [];
+
+    txt.addEventListener('keyup', e => {
+        arr.push(e.target.value.trim().split(''));
+    });
+
+    function back () {
+        if (arr.length <= 0) return;
+
+        arr.pop();
+
+        txt.value = arr[arr.length - 1].join('');
+    }
+</script>

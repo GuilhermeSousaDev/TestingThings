@@ -1,0 +1,16 @@
+<div>
+    <h1>Hello World</h1>
+    <ul>
+        <%
+            pessoas.map(p => { %>
+                <li>
+                    <%= p.nome %>
+                </li>
+                <li>
+                    <%= p.idade %>
+                </li>
+        <% 
+            });
+        %>
+    </ul>
+</div>
