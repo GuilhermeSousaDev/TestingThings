@@ -8,7 +8,7 @@ app.use(express.urlencoded());
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render('qrcode');
+    res.render('maps');
 });
 
 app.listen(8081);
